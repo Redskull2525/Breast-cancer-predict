@@ -69,8 +69,7 @@ def load_model():
         st.success("✅ Model 'best_LR.pkl' loaded successfully.")
         return model
     except FileNotFoundError:
-        st.error("❌ Model file 'best
-        _LR.pkl' not found in the application directory. Please ensure it is present.")
+        st.error("❌ Model file 'best_LR.pkl' not found in the application directory. Please ensure it is present.")
         return "MODEL_NOT_FOUND"
 
 model = load_model()
