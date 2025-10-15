@@ -71,12 +71,12 @@ FEATURE_DEFAULTS = {
 def load_model():
     """Loads the pickled model from the file system."""
     try:
-        with open('LR_model.pkl', 'rb') as f:
+        with open('best_LR.pkl', 'rb') as f:
             model = pickle.load(f)
-        st.success("Model 'LR_model.pkl' loaded successfully.")
+        st.success("Model 'best_LR.pkl' loaded successfully.")
         return model
     except FileNotFoundError:
-        st.error(f"Model file 'LR_model.pkl' not found in the application directory. Please ensure it is present.")
+        st.error(f"Model file 'best_LR.pkl' not found in the application directory. Please ensure it is present.")
         # Return a string placeholder if the file is missing to prevent crashes
         return "MODEL_NOT_FOUND"
 
